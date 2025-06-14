@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom right, #8498ff, #fc64ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00000020;
+    width: 800px;
+}
+.form-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-grid{
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input-group{
+    display: flex;
+    flex-direction: row;
+}
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+.input-group input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.gender {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 20px 0;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+button{
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cancel {
+    background-color: #ff6b6b;
+}
+.submit {
+    background: linear-gradient(to bottom right, #6a82ff, #dd7afe);;
+}
