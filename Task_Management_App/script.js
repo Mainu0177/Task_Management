@@ -68,21 +68,26 @@ function renderTasks() {
         taskCard.style.width = "250px";
 
         if (task.completed) {
-            taskCard.classList.add("bg-success", "text-black");
+            taskCard.classList.add("bg-success", "text-decoration-none");
         } else {
             taskCard.classList.add("bg-warning");
-        }
+      }
+      
 
-        const taskText = document.createElement("span");
+      const taskText = document.createElement("span");
+      if (task.completed) {
+        taskText.classList.add("text-decoration-line-through")
+      }
         taskText.textContent = task.text;
 
         const taskStatus = document.createElement("p");
         taskStatus.classList.add("small", "fw-bold");
-        taskStatus.textContent = task.completed ? "Completed" : "Pending";
+        // taskStatus.textContent = task.completed ? "Completed" : "Pending";
 
-        const toggleButton = document.createElement("button");
-        toggleButton.classList = task.completed ? "btn btn-sm btn-outline-light mb-2" : "btn btn-sm btn-outline-light mb-2 text-decoration-line-through";
+      const toggleButton = document.createElement("button");
+        toggleButton.classList = task.completed ? "btn btn-sm btn-outline-light mb-2" : "btn btn-sm btn-outline-light mb-2";
         toggleButton.textContent = task.completed ? "Completed" : "Pending";
+
         toggleButton.addEventListener("click", () => {
             tasks[index].completed = !tasks[index].completed;
             saveTasks();
